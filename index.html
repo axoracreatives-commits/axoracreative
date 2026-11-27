@@ -60,13 +60,30 @@ a{color:#D7FF5B;text-decoration:none}a:hover{color:#FFFFFF}
 @supports (animation-timeline: view()){.count-num{animation:countUp linear both;animation-timeline:view();animation-range:entry 0% cover 60%}}
 .count-plus{animation:plusPop 2.4s ease-in-out infinite;transform-origin:center}
 @keyframes plusPop{0%,100%{rotate:0deg;scale:1}50%{rotate:90deg;scale:1.15}}
-@media (prefers-reduced-motion:reduce){.marquee-track,.pulse,.hero-zoom,.live-dot,.rise,.reveal,.grow,.float-slow,.float-b,.spin,.breathe,.drift,.twinkle,.count-plus{animation:none}.count-num{animation:none;--n:50}}
+.topbar{animation:topShift 12s ease-in-out infinite alternate}
+@keyframes topShift{from{background-position:0% 50%}to{background-position:100% 50%}}
+.top-glow{animation:topGlow 10s ease-in-out infinite alternate}
+@keyframes topGlow{from{translate:0 0}to{translate:620px 30px}}
+.top-glow2{animation:topGlow2 13s ease-in-out infinite alternate}
+@keyframes topGlow2{from{translate:0 0}to{translate:-480px -20px}}
+.top-star{animation:spin 8s linear infinite, floatY 4s ease-in-out infinite alternate}
+.top-star2{animation:spin 10s linear infinite reverse, floatY 5s ease-in-out infinite alternate}
+@keyframes floatY{from{translate:0 0}to{translate:0 8px}}
+.top-line{animation:lineSweep 4.5s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes lineSweep{from{background-position:-60% 0}to{background-position:160% 0}}
+@media (prefers-reduced-motion:reduce){.marquee-track,.pulse,.hero-zoom,.live-dot,.rise,.reveal,.grow,.float-slow,.float-b,.spin,.breathe,.drift,.twinkle,.count-plus,.topbar,.top-glow,.top-glow2,.top-star,.top-star2,.top-line{animation:none}.count-num{animation:none;--n:50}}
 </style>
 </head>
 <body>
 <div style="background: #0B0B0B; color: #FFFFFF; font-family: Montserrat, sans-serif; min-height: 100vh">
 
-<header style="max-width: 1280px; margin: 0 auto; padding: 28px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center">
+<div class="topbar" style="position: relative; overflow: hidden; background: linear-gradient(110deg, #0B0B0B 0%, #13190A 30%, #22300C 50%, #13190A 70%, #0B0B0B 100%); background-size: 220% 100%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(rgba(215,255,91,0.18) 1px, transparent 1.4px); background-size: 18px 18px; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 30%, #000 70%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 30%, #000 70%, transparent 100%); opacity: 0.5"></div>
+<div class="top-glow" aria-hidden="true" style="position: absolute; top: -120px; left: 10%; width: 360px; height: 240px; border-radius: 50%; background: #D7FF5B; opacity: 0.22; filter: blur(70px)"></div>
+<div class="top-glow2" aria-hidden="true" style="position: absolute; bottom: -140px; right: 15%; width: 300px; height: 220px; border-radius: 50%; background: #3B5BFF; opacity: 0.14; filter: blur(80px)"></div>
+<div class="twinkle top-star" aria-hidden="true" style="position: absolute; left: 38%; top: 22px; color: #D7FF5B; font-size: 14px; opacity: 0.7">✦</div>
+<div class="twinkle top-star2" aria-hidden="true" style="position: absolute; left: 62%; bottom: 18px; color: #FFFFFF; font-size: 10px; opacity: 0.5">✦</div>
+<header style="position: relative; max-width: 1280px; margin: 0 auto; padding: 28px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center">
 <a href="#top" style="display: block"><img src="images/logo-white.png" alt="AXORA" style="height: 40px; width: auto; display: block"></a>
 <div style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 3px; color: #9A9A9A"><div class="live-dot" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #D7FF5B"></div><div>JAKARTA · GMT+7</div></div>
 <nav style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; font-size: 14px; font-weight: 500; letter-spacing: 2px">
@@ -77,6 +94,8 @@ a{color:#D7FF5B;text-decoration:none}a:hover{color:#FFFFFF}
 <a href="#kontak" class="btn" style="background: #D7FF5B; color: #0B0B0B; padding: 14px 24px; border-radius: 12px; font-weight: 700">LET&#39;S CREATE →</a>
 </nav>
 </header>
+<div class="top-line" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(90deg, transparent 0%, #D7FF5B 50%, transparent 100%); background-size: 40% 100%; background-repeat: no-repeat"></div>
+</div>
 
 <main>
 <section id="top" style="position: relative; overflow: hidden">
