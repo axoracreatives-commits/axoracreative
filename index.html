@@ -294,5 +294,50 @@ a{color:#D7FF5B;text-decoration:none}a:hover{color:#FFFFFF}
 </main>
 
 </div>
+<style>
+.js .sr{opacity:0;translate:0 56px;transition:opacity .9s cubic-bezier(.2,.8,.2,1),translate .9s cubic-bezier(.2,.8,.2,1)}
+.js .sr.sr-in{opacity:1;translate:0 0}
+.js .reveal,.js .grow{animation:none}
+.js .count-num{font-size:inherit;animation:none}
+.js .count-num::before{content:none}
+@media (prefers-reduced-motion:reduce){.js .sr{opacity:1;translate:none;transition:none}}
+</style>
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var targets = [];
+  function mark(el, delay){ if(!el || el.classList.contains('sr')) return; el.classList.add('sr'); el.style.transitionDelay = delay + 'ms'; targets.push(el); }
+  document.querySelectorAll('main > section, main > div:not(.marquee)').forEach(function(sec){
+    if (sec.id === 'top') return;
+    var wrap = sec.querySelector(':scope > div[style*="max-width: 1280px"]') || sec;
+    Array.prototype.forEach.call(wrap.children, function(ch, i){ mark(ch, Math.min(i, 4) * 140); });
+  });
+  document.querySelectorAll('.reveal').forEach(function(el){
+    var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+    if (!el.classList.contains('sr')) mark(el, 200 + Math.min(sibs, 8) * 90);
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('sr-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  targets.forEach(function(t){ if (reduce) t.classList.add('sr-in'); else io.observe(t); });
+  // count-up 0 -> 50
+  var num = document.querySelector('.count-num');
+  if (num){
+    num.textContent = reduce ? '50' : '0';
+    if (!reduce){
+      var cio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if (!e.isIntersecting) return; cio.disconnect();
+          var t0 = performance.now(), d = 1800;
+          (function step(t){ var p = Math.min(1,(t-t0)/d); num.textContent = Math.round(50*(1-Math.pow(1-p,3))); if (p<1) requestAnimationFrame(step); })(t0);
+        });
+      }, { threshold: 0.6 });
+      cio.observe(num);
+    }
+  }
+})();
+</script>
 </body>
 </html>
