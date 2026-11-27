@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AXORA — Ideas Into Impact</title>
+<meta name="description" content="Axora creative agency &amp; production house: branding, desain, UI/UX, advertising, video, dokumentasi event, dan komunikasi CSR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0B0B0B}
+a{color:#D7FF5B;text-decoration:none}a:hover{color:#FFFFFF}
+.btn{transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background-color .25s,color .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(215,255,91,.6)}
+.btn:active{transform:scale(.94);transition-duration:.08s}
+.btn svg,.btn span{transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.btn:hover svg,.btn:hover span{transform:translate(5px,-2px)}
+.btn-ghost:hover{background:#FFFFFF!important;color:#0B0B0B!important}
+.pulse{animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(215,255,91,.55)}70%{box-shadow:0 0 0 16px rgba(215,255,91,0)}100%{box-shadow:0 0 0 0 rgba(215,255,91,0)}}
+.nav-link{position:relative;transition:color .2s}
+.nav-link::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:#D7FF5B;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-link:hover{color:#FFFFFF!important}.nav-link:hover::after{transform:scaleX(1)}
+.card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-8px) rotate(-1deg);box-shadow:0 24px 40px -18px rgba(11,11,11,.45)}
+.work img{transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .5s}
+.work:hover img{transform:scale(1.03);filter:saturate(1) contrast(1.05)!important}
+.work:active img{transform:scale(.98)}
+.chip{transition:transform .25s cubic-bezier(.2,.8,.2,1),background-color .25s}
+.chip:hover{transform:translateY(-4px) rotate(-2deg);background:#D7FF5B!important}
+.chip:active{transform:scale(.92)}
+.marquee-track{animation:marquee 32s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.live-dot{animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero-zoom{animation:heroZoom 18s ease-in-out infinite alternate;transform-origin:65% 40%;will-change:transform}
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.1)}}
+.rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.45s}.d4{animation-delay:.65s}
+@keyframes rise{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+@supports (animation-timeline: view()){.reveal{animation:reveal linear both;animation-timeline:view();animation-range:entry 5% cover 25%}.grow{animation:grow linear both;animation-timeline:view();animation-range:entry 10% cover 30%}}
+@keyframes reveal{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+.grow{transform-origin:left}@keyframes grow{from{scale:0 1}to{scale:1 1}}
+.float-slow{animation:floaty 14s ease-in-out infinite alternate}
+@keyframes floaty{from{translate:0 0}to{translate:-60px 40px}}
+.float-b{animation:floaty2 9s ease-in-out infinite alternate}
+@keyframes floaty2{from{translate:0 0}to{translate:24px -20px}}
+.spin{animation:spin 28s linear infinite}@keyframes spin{to{rotate:360deg}}
+.breathe{animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{scale:1}50%{scale:1.07}}
+.drift{animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{translate:0 0}to{translate:-90px 0}}
+.twinkle{animation:spin 6s linear infinite}
+@property --n{syntax:'<integer>';initial-value:0;inherits:false}
+.count-num{font-size:0;animation:countUp 2.4s cubic-bezier(.16,.84,.3,1) .3s both;counter-reset:n var(--n)}
+.count-num::before{content:counter(n);font-size:clamp(96px,12vw,180px)}
+@keyframes countUp{from{--n:0}to{--n:50}}
+@supports (animation-timeline: view()){.count-num{animation:countUp linear both;animation-timeline:view();animation-range:entry 0% cover 60%}}
+.count-plus{animation:plusPop 2.4s ease-in-out infinite;transform-origin:center}
+@keyframes plusPop{0%,100%{rotate:0deg;scale:1}50%{rotate:90deg;scale:1.15}}
+@media (prefers-reduced-motion:reduce){.marquee-track,.pulse,.hero-zoom,.live-dot,.rise,.reveal,.grow,.float-slow,.float-b,.spin,.breathe,.drift,.twinkle,.count-plus{animation:none}.count-num{animation:none;--n:50}}
+</style>
+</head>
+<body>
+<div style="background: #0B0B0B; color: #FFFFFF; font-family: Montserrat, sans-serif; min-height: 100vh">
+
+<header style="max-width: 1280px; margin: 0 auto; padding: 28px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center">
+<a href="#top" style="display: block"><img src="images/logo-white.png" alt="AXORA" style="height: 40px; width: auto; display: block"></a>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 3px; color: #9A9A9A"><div class="live-dot" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #D7FF5B"></div><div>JAKARTA · GMT+7</div></div>
+<nav style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; font-size: 14px; font-weight: 500; letter-spacing: 2px">
+<a href="#layanan" class="nav-link" style="color: #C9C9C9">LAYANAN</a>
+<a href="#karya" class="nav-link" style="color: #C9C9C9">KARYA</a>
+<a href="#proses" class="nav-link" style="color: #C9C9C9">PROSES</a>
+<a href="#kalender" class="nav-link" style="color: #C9C9C9">KALENDER</a>
+<a href="#kontak" class="btn" style="background: #D7FF5B; color: #0B0B0B; padding: 14px 24px; border-radius: 12px; font-weight: 700">LET&#39;S CREATE →</a>
+</nav>
+</header>
+
+<main>
+<section id="top" style="position: relative; overflow: hidden">
+<img class="hero-zoom" src="images/hero-city.jpg" alt="Gedung-gedung kaca pencakar langit dilihat dari bawah dengan langit biru dan kilau matahari" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,11,0.88) 0%, rgba(11,11,11,0.6) 45%, rgba(11,11,11,0.2) 100%), linear-gradient(180deg, rgba(11,11,11,0.35) 0%, rgba(11,11,11,0) 30%, rgba(11,11,11,0) 60%, #0B0B0B 100%)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 160px 5% 96px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div class="rise d1" style="font-size: 14px; font-weight: 500; letter-spacing: 6px; color: #E5E5E5">CREATIVE AGENCY · PRODUCTION HOUSE</div>
+<h1 class="rise d2" style="color: #FFFFFF; margin: 0; font-size: clamp(56px, 10vw, 148px); font-weight: 800; line-height: 0.95; letter-spacing: -0.05em">Ideas Into<br><span style="color: #D7FF5B">Impact.</span></h1>
+<p class="rise d3" style="margin: 0; max-width: 620px; font-size: 20px; line-height: 1.6; color: #C9C9C9">Kami gabungkan strategi dan kreativitas supaya konten kamu bukan cuma dilihat, tapi juga menggerakkan. Dari branding, desain, UI/UX, iklan, video, multimedia &amp; live streaming, dokumentasi event, sampai komunikasi CSR.</p>
+<div class="rise d4" style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px">
+<a href="#kontak" class="btn pulse" style="display: flex; align-items: center; gap: 12px; background: #D7FF5B; color: #0B0B0B; padding: 18px 32px; border-radius: 14px; font-size: 16px; font-weight: 700">Mulai Proyek
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B0B0B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 L17 7"></path><path d="M8 7 H17 V16"></path></svg></a>
+<a href="#karya" class="btn btn-ghost" style="display: flex; align-items: center; padding: 18px 32px; border-radius: 14px; border: 1.5px solid #FFFFFF; color: #FFFFFF; font-size: 16px; font-weight: 600">Lihat Karya</a>
+</div>
+</div>
+</section>
+
+<div class="marquee" style="border-top: 1px solid #2A2A2A; border-bottom: 1px solid #2A2A2A; overflow: hidden; padding: 26px 0; font-size: 20px; font-weight: 700; letter-spacing: 4px; white-space: nowrap; -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%)">
+<div class="marquee-track" style="display: flex; width: max-content"><div style="display: flex; align-items: center; gap: 40px; padding-right: 40px; flex-shrink: 0"><div style="color: #FFFFFF">GRAPHIC DESIGN</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">EVENT DOCUMENTATION</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">DIGITAL MARKETING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">PRODUCTION HOUSE</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">CSR COMMUNICATION</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">BRANDING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">ADVERTISING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">UI/UX DESIGN</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">MULTIMEDIA &amp; LIVE STREAMING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div></div><div aria-hidden="true" style="display: flex; align-items: center; gap: 40px; padding-right: 40px; flex-shrink: 0"><div style="color: #FFFFFF">GRAPHIC DESIGN</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">EVENT DOCUMENTATION</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">DIGITAL MARKETING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">PRODUCTION HOUSE</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">CSR COMMUNICATION</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">BRANDING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">ADVERTISING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #9A9A9A">UI/UX DESIGN</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div><div style="color: #FFFFFF">MULTIMEDIA &amp; LIVE STREAMING</div><div class="twinkle" aria-hidden="true" style="color: #D7FF5B; font-size: 18px">✦</div></div></div>
+</div>
+</div>
+
+<section style="position: relative; overflow: hidden; background: radial-gradient(ellipse 80% 60% at 85% 50%, #1A1F0A 0%, #0B0B0B 70%)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, #000 10%, transparent 70%); mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, #000 10%, transparent 70%)"></div>
+<div class="float-slow" aria-hidden="true" style="position: absolute; right: -160px; top: 50%; width: 640px; height: 640px; margin-top: -320px; border-radius: 50%; background: #D7FF5B; opacity: 0.16; filter: blur(140px)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 28px">
+<div class="grow" style="width: 72px; height: 6px; background: #D7FF5B"></div>
+<h2 class="reveal" style="color: #FFFFFF; margin: 0; font-size: clamp(40px, 5vw, 72px); font-weight: 600; line-height: 1.04; letter-spacing: -0.04em">Content without strategy is just <span style="font-style: italic; font-weight: 300; color: #D7FF5B">noise.</span></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.7; color: #C9C9C9">Tren datang dan pergi. Yang bertahan adalah karya yang punya arti. Sebelum bikin konten, kami tentukan dulu arahnya, baru kami ciptakan cerita yang mencerminkan visimu.</p>
+</div>
+<div style="flex: 1 1 400px; display: flex; flex-direction: column; gap: 14px">
+<div class="reveal" style="background: #161616; border: 1px solid #2E2E2E; border-radius: 20px; padding: 24px 28px; font-size: 17px; line-height: 1.5; color: #E5E5E5"><b style="color: #FFFFFF">More Reach</b> › bukan cuma likes dari teman sendiri.</div>
+<div class="reveal" style="background: #161616; border: 1px solid #2E2E2E; border-radius: 20px; padding: 24px 28px; font-size: 17px; line-height: 1.5; color: #E5E5E5"><b style="color: #FFFFFF">Better Leads</b> › bukan cuma "kak, pricelist dong" terus hilang.</div>
+<div class="reveal" style="background: #161616; border: 1px solid #2E2E2E; border-radius: 20px; padding: 24px 28px; font-size: 17px; line-height: 1.5; color: #E5E5E5"><b style="color: #FFFFFF">Stronger Brand</b> › bukan feed yang asal posting.</div>
+<div class="reveal" style="background: #D7FF5B; border-radius: 20px; padding: 24px 28px; font-size: 17px; line-height: 1.5; color: #0B0B0B"><b>Real Impact</b> › bukan sekadar angka views.</div>
+</div>
+</div>
+</section>
+
+<section id="layanan" style="position: relative; overflow: hidden; background: linear-gradient(160deg, #F0F0F0 0%, #E5E5E5 45%, #CFCFCF 100%); color: #0B0B0B">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: radial-gradient(rgba(11,11,11,0.16) 1.4px, transparent 1.6px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(ellipse 55% 60% at 90% 10%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse 55% 60% at 90% 10%, #000 0%, transparent 70%)"></div>
+<div class="float-slow" aria-hidden="true" style="position: absolute; left: -120px; bottom: -160px; width: 520px; height: 520px; border-radius: 50%; background: #D7FF5B; opacity: 0.35; filter: blur(120px)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 6px; color: #4D4D4D">OUR SERVICES</div>
+<h2 class="reveal" style="color: #0B0B0B; margin: 0; font-size: clamp(40px, 6vw, 88px); font-weight: 800; line-height: 1; letter-spacing: -0.04em">THIS IS HOW WE<br>TURN IDEAS INTO IMPACT</h2>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<div class="card reveal" style="background: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #4D4D4D">01</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Graphic Design</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A">Identitas visual, desain feed Instagram, dan materi promosi yang konsisten dan nggak pakai template pasaran.</p></div>
+<div class="card reveal" style="background: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #4D4D4D">02</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Event Documentation</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A">Satu hari acara bisa jadi konten berbulan-bulan: aftermovie, reels, foto, sampai testimoni.</p></div>
+<div class="card reveal" style="background: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #4D4D4D">03</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Digital Marketing</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A">Great work deserves to be seen. Kami pastikan cerita brand kamu sampai ke orang yang tepat.</p></div>
+<div class="card reveal" style="background: #0B0B0B; color: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #9A9A9A">04</div><h3 style="color: #FFFFFF; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Production House</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C9C9C9">Cinematic video, drone footage, color grading, reels &amp; short video. Shot to impress. Edited to convert.</p></div>
+<div class="card reveal" style="background: #D7FF5B; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #3A3A3A">05</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">CSR Communication</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1E1E1E">CSR isn't charity, it's storytelling. Program yang berdampak harus diceritakan dengan benar supaya diingat.</p></div>
+<div class="card reveal" style="background: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #4D4D4D">06</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Branding</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A">Dari nama, logo, sampai brand guideline. Kami bangun identitas yang punya karakter dan gampang diingat.</p></div>
+<div class="card reveal" style="background: #0B0B0B; color: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #9A9A9A">07</div><h3 style="color: #FFFFFF; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Advertising</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C9C9C9">Konsep kampanye, materi iklan, sampai pengelolaan ads di media sosial. Iklan yang bukan cuma lewat, tapi bikin orang bertindak.</p></div>
+<div class="card reveal" style="background: #FFFFFF; border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 16px; min-height: 260px; box-sizing: border-box"><div style="font-size: 14px; font-weight: 600; color: #4D4D4D">08</div><h3 style="color: #0B0B0B; margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em">UI/UX Design</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A">Desain website dan aplikasi yang enak dilihat dan gampang dipakai, dari wireframe sampai prototype siap develop.</p></div>
+<div class="card reveal" style="grid-column: 1 / -1; background: #0B0B0B; color: #FFFFFF; border-radius: 24px; padding: 36px 40px; display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: center; justify-content: space-between; box-sizing: border-box">
+<div style="display: flex; flex-direction: column; gap: 14px; flex: 1 1 420px">
+<div style="display: flex; align-items: center; gap: 14px"><div style="font-size: 14px; font-weight: 600; color: #9A9A9A">09</div><div style="display: flex; align-items: center; gap: 8px; background: #FF3B3B; color: #FFFFFF; border-radius: 999px; padding: 5px 12px; font-size: 12px; font-weight: 800; letter-spacing: 2px"><div class="live-dot" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #FFFFFF"></div>LIVE</div></div>
+<h3 style="color: #FFFFFF; margin: 0; font-size: clamp(28px, 3vw, 40px); font-weight: 700; letter-spacing: -0.03em">Multimedia &amp; Live Streaming</h3>
+<p style="margin: 0; max-width: 560px; font-size: 16px; line-height: 1.6; color: #C9C9C9">Produksi multimedia untuk acara kamu, sekaligus siaran langsung ke YouTube, Instagram, Zoom, atau platform pilihanmu. Dari persiapan teknis, operator, sampai tayang, kami yang urus.</p>
+<a href="https://wa.me/6281316044030?text=Halo%20Axora%2C%20saya%20mau%20tanya%20soal%20multimedia%20%26%20live%20streaming." class="btn" style="align-self: flex-start; margin-top: 8px; display: flex; align-items: center; gap: 14px; background: #D7FF5B; color: #0B0B0B; padding: 18px 28px; border-radius: 14px; font-size: 16px; font-weight: 700">Tanya soal multimedia &amp; live<span>→</span></a>
+</div>
+<a href="https://www.youtube.com/live/ocvNg_nfu2U" class="work" style="flex: 1 1 380px; max-width: 520px; display: flex; flex-direction: column; gap: 16px; background: #161616; border: 1px solid #2E2E2E; border-radius: 20px; padding: 24px; color: #FFFFFF">
+<div style="position: relative; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: radial-gradient(ellipse 80% 80% at 30% 30%, #2A2F14 0%, #111111 70%); display: flex; align-items: center; justify-content: center">
+<div aria-hidden="true" style="position: absolute; left: 14px; top: 14px; display: flex; align-items: center; gap: 6px; background: #FF3B3B; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 800; letter-spacing: 2px">● LIVE</div>
+<div aria-hidden="true" style="position: absolute; right: 14px; bottom: 12px; font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #9A9A9A">YOUTUBE</div>
+<div class="pulse" aria-hidden="true" style="width: 72px; height: 72px; border-radius: 50%; background: #D7FF5B; display: flex; align-items: center; justify-content: center"><svg width="26" height="30" viewBox="0 0 26 30"><path d="M3 2 L24 15 L3 28 Z" fill="#0B0B0B"></path></svg></div>
+</div>
+<div style="font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #D7FF5B">PORTOFOLIO · LIVE STREAMING</div>
+<div style="font-size: 20px; font-weight: 700; line-height: 1.3; letter-spacing: -0.01em">Penyerahan Penghargaan &amp; Debriefing Pasca Gempa Cianjur</div>
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; color: #9A9A9A"><div>Kementerian Kesehatan RI · Januari 2023</div><div style="color: #FFFFFF; font-weight: 700; white-space: nowrap">Tonton →</div></div>
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="klien" style="position: relative; overflow: hidden; background: #0B0B0B; border-top: 1px solid #2A2A2A">
+<div class="float-slow" aria-hidden="true" style="position: absolute; left: -180px; top: 30%; width: 520px; height: 520px; border-radius: 50%; background: #D7FF5B; opacity: 0.12; filter: blur(130px)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 14px; font-weight: 500; letter-spacing: 6px; color: #9A9A9A">TRUSTED BY</div>
+<div class="reveal count-wrap" aria-label="50+" style="font-size: clamp(96px, 12vw, 180px); font-weight: 900; line-height: 0.9; letter-spacing: -0.06em; color: #D7FF5B"><span class="count-num" aria-hidden="true">50</span><span class="count-plus" aria-hidden="true" style="display: inline-block">+</span></div>
+<h2 class="reveal" style="color: #FFFFFF; margin: 0; font-size: clamp(32px, 3.6vw, 52px); font-weight: 600; line-height: 1.08; letter-spacing: -0.03em">klien sudah <span style="font-style: italic; font-weight: 300">berkolaborasi</span> dengan kami.</h2>
+<p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #C9C9C9">Dari BUMN, kementerian, sampai perusahaan swasta.</p>
+</div>
+<div style="flex: 1.4 1 520px; display: flex; flex-direction: column; gap: 16px; min-width: 0">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px">
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/pln.png" alt="Logo PLN" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Perusahaan Listrik Negara</div></div>
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/pjb.png" alt="Logo PJB" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Pembangkitan Jawa-Bali</div></div>
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/lapp.png" alt="Logo LAPP" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Lapp Kabel Indonesia</div></div>
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/kemenkes.png" alt="Logo Kementerian Kesehatan RI" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Kementerian Kesehatan RI</div></div>
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/kemendikbud.png" alt="Logo Kementerian Pendidikan dan Kebudayaan" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Kementerian Pendidikan dan Kebudayaan</div></div>
+<div class="card reveal" style="background: transparent; border-radius: 20px; padding: 24px 22px 18px; min-height: 170px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 14px"><div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: center"><img src="images/clients/bpdpks.png" alt="Logo BPDPKS" style="max-width: 82%; max-height: 72px; width: auto; height: auto; display: block"></div><div style="font-size: 12px; line-height: 1.35; color: #9A9A9A; text-align: center">Badan Pengelola Dana Perkebunan Kelapa Sawit</div></div>
+</div>
+<div style="font-size: 15px; font-weight: 600; letter-spacing: 2px; color: #9A9A9A; text-align: right">DAN <span style="color: #D7FF5B">44+</span> KLIEN LAINNYA</div>
+</div>
+</div>
+</section>
+
+<section id="karya" style="position: relative; overflow: hidden; background: linear-gradient(180deg, #0B0B0B 0%, #121212 100%)">
+<div class="drift" aria-hidden="true" style="position: absolute; right: -2%; top: 40px; font-size: clamp(120px, 20vw, 300px); font-weight: 900; line-height: 1; letter-spacing: -0.06em; color: transparent; -webkit-text-stroke: 1.5px #262626; white-space: nowrap">impact.</div>
+<div class="float-slow" aria-hidden="true" style="position: absolute; left: -200px; bottom: -200px; width: 600px; height: 600px; border-radius: 50%; background: #D7FF5B; opacity: 0.10; filter: blur(150px)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-size: 14px; font-weight: 500; letter-spacing: 6px; color: #9A9A9A">SELECTED WORKS</div>
+<h2 class="reveal" style="color: #FFFFFF; margin: 0; font-size: clamp(40px, 5vw, 72px); font-weight: 600; line-height: 1.04; letter-spacing: -0.04em">Karya yang <span style="color: #D7FF5B">bicara.</span></h2>
+</div>
+<a href="#kontak" class="nav-link" style="font-size: 14px; font-weight: 600; letter-spacing: 3px">LIHAT SEMUA →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+<a href="#kontak" class="work reveal" style="display: flex; flex-direction: column; gap: 18px; color: #FFFFFF">
+<img src="images/csr-batam.jpg" alt="Program CSR panel surya untuk sekolah di Batam" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; filter: saturate(0.6) contrast(1.05); display: block">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #D7FF5B">CSR COMMUNICATION</div>
+<div style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Panel Surya untuk Sekolah, Batam</div>
+</a>
+<a href="#kontak" class="work reveal" style="display: flex; flex-direction: column; gap: 18px; color: #FFFFFF">
+<img src="images/event-csr.jpg" alt="Penyerahan piagam penghargaan program CSR" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; filter: saturate(0.6) contrast(1.05); display: block">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #D7FF5B">EVENT DOCUMENTATION</div>
+<div style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Seremoni Penyerahan Program CSR</div>
+</a>
+<a href="#kontak" class="work reveal" style="display: flex; flex-direction: column; gap: 18px; color: #FFFFFF">
+<img src="images/mangrove.jpg" alt="Foto udara desa pesisir dan hutan mangrove" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 24px; filter: saturate(0.6) contrast(1.05); display: block">
+<div style="font-size: 13px; font-weight: 600; letter-spacing: 4px; color: #D7FF5B">PRODUCTION HOUSE</div>
+<div style="font-size: 24px; font-weight: 700; letter-spacing: -0.02em">Dokumenter Mangrove Pesisir</div>
+</a>
+</div>
+</div>
+</section>
+
+<section id="proses" style="position: relative; overflow: hidden; border-top: 1px solid #2A2A2A; background: radial-gradient(ellipse 60% 70% at 25% 50%, #1A1F0A 0%, #121212 45%, #0B0B0B 100%)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 50% 60% at 80% 50%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse 50% 60% at 80% 50%, #000 0%, transparent 70%)"></div>
+<div aria-hidden="true" class="spin" style="position: absolute; right: 6%; top: 80px; width: 160px; height: 160px; border-radius: 50%; border: 1.5px dashed #4D4D4D"></div>
+<div aria-hidden="true" class="breathe" style="position: absolute; right: calc(6% + 40px); top: 120px; width: 80px; height: 80px; border-radius: 50%; border: 1.5px solid #D7FF5B; opacity: 0.6"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 420px; position: relative">
+<img src="images/halftone.png" alt="Ilustrasi halftone dua orang berjabat tangan" style="width: 100%; height: auto; display: block">
+</div>
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="align-self: flex-start; background: #D7FF5B; color: #0B0B0B; border-radius: 16px; padding: 12px 24px; font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; letter-spacing: -0.03em">We create with you,</div>
+<div style="align-self: flex-start; background: #FFFFFF; color: #0B0B0B; border-radius: 16px; padding: 12px 24px; font-size: clamp(28px, 3.4vw, 44px); font-weight: 700; letter-spacing: -0.03em; transform: rotate(-1.5deg)">not for you.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<div class="reveal" style="display: flex; gap: 24px; align-items: flex-start"><div style="font-size: 40px; font-weight: 800; color: #D7FF5B; line-height: 1; width: 64px; flex-shrink: 0">01</div><div><h3 style="color: #FFFFFF; margin: 0 0 6px; font-size: 22px; font-weight: 700">Dengar</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9C9C9">Kami pahami brand, target, dan cerita yang mau kamu sampaikan.</p></div></div>
+<div class="reveal" style="display: flex; gap: 24px; align-items: flex-start"><div style="font-size: 40px; font-weight: 800; color: #D7FF5B; line-height: 1; width: 64px; flex-shrink: 0">02</div><div><h3 style="color: #FFFFFF; margin: 0 0 6px; font-size: 22px; font-weight: 700">Strategi</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9C9C9">Kami tentukan arah, pesan, dan format yang paling tepat sebelum produksi.</p></div></div>
+<div class="reveal" style="display: flex; gap: 24px; align-items: flex-start"><div style="font-size: 40px; font-weight: 800; color: #D7FF5B; line-height: 1; width: 64px; flex-shrink: 0">03</div><div><h3 style="color: #FFFFFF; margin: 0 0 6px; font-size: 22px; font-weight: 700">Ciptakan</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #C9C9C9">Kami eksekusi bareng kamu, sampai hasilnya terasa dan diingat.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kalender" style="position: relative; overflow: hidden; border-top: 1px solid #2A2A2A; background: radial-gradient(ellipse 60% 70% at 80% 30%, #1A1F0A 0%, #0B0B0B 65%)">
+<div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse 50% 60% at 15% 20%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse 50% 60% at 15% 20%, #000 0%, transparent 70%)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 128px 5%; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 28px">
+<div style="font-size: 14px; font-weight: 500; letter-spacing: 6px; color: #9A9A9A">AXORA CALENDAR</div>
+<h2 class="reveal" style="color: #FFFFFF; margin: 0; font-size: clamp(40px, 5vw, 72px); font-weight: 600; line-height: 1.04; letter-spacing: -0.04em">Kapan kita <span style="color: #D7FF5B">mulai?</span></h2>
+<p style="margin: 0; max-width: 480px; font-size: 18px; line-height: 1.7; color: #C9C9C9">Pilih waktu yang pas buat kamu, kabari kami lewat WhatsApp, dan kita mulai dari ngobrol santai soal ide kamu.</p>
+<a href="https://wa.me/6281316044030?text=Halo%20Axora%2C%20saya%20mau%20jadwalkan%20ngobrol%20soal%20proyek." class="btn" style="align-self: flex-start; display: flex; align-items: center; gap: 14px; background: #D7FF5B; color: #0B0B0B; padding: 18px 32px; border-radius: 14px; font-size: 16px; font-weight: 700">Jadwalkan ngobrol<span>→</span></a>
+</div>
+<div style="flex: 1 1 380px; max-width: 460px; min-width: 0">
+<div class="reveal" style="background: #161616; border: 1px solid #2E2E2E; border-radius: 24px; padding: 28px">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px"><div style="font-size: 16px; font-weight: 800; letter-spacing: 3px; color: #FFFFFF">NOVEMBER 2026</div><div style="font-size: 12px; font-weight: 600; letter-spacing: 2px; color: #D7FF5B">GMT+7</div></div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; text-align: center"><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">SEN</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">SEL</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">RAB</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">KAM</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">JUM</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">SAB</div><div style="font-size: 11px; font-weight: 700; letter-spacing: 1px; color: #6A6A6A; padding-bottom: 6px">MIN</div><div></div><div></div><div></div><div></div><div></div><div></div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">1</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">2</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">3</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">4</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">5</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">6</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">7</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">8</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">9</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">10</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">11</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">12</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">13</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">14</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">15</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">16</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">17</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">18</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">19</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">20</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">21</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">22</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">23</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">24</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">25</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">26</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">27</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">28</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">29</div><div style="aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; border-radius: 12px; color: #C9C9C9; font-size: 14px; font-weight: 500">30</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="position: relative; overflow: hidden; background: radial-gradient(ellipse 90% 80% at 50% 0%, #6A6A6A 0%, #4D4D4D 40%, #2A2A2A 100%)">
+<div class="float-b" aria-hidden="true" style="position: absolute; left: -80px; top: 60px; width: 380px; height: 220px; border-radius: 26px; background: #3A3A3A; border: 1px solid #5A5A5A; transform: rotate(-16deg); filter: blur(4px); opacity: 0.7"></div>
+<div class="float-b" aria-hidden="true" style="position: absolute; right: -90px; bottom: 40px; width: 400px; height: 230px; border-radius: 26px; background: #3A3A3A; border: 1px solid #5A5A5A; transform: rotate(14deg); filter: blur(5px); opacity: 0.7"></div>
+<div class="float-slow" aria-hidden="true" style="position: absolute; left: 50%; top: 40px; width: 560px; height: 300px; margin-left: -280px; border-radius: 50%; background: #D7FF5B; opacity: 0.18; filter: blur(110px)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 112px 5%; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px; align-items: center; text-align: center">
+<h2 class="reveal" style="color: #FFFFFF; margin: 0; line-height: 1"><span style="display: block; font-size: clamp(36px, 4vw, 56px); font-style: italic; font-weight: 300; letter-spacing: -0.03em">Take what</span><span style="display: block; font-size: clamp(56px, 7vw, 104px); font-weight: 800; letter-spacing: -0.05em; color: #D7FF5B">you need.</span></h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 960px">
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Video Company Profile</a>
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Konten Reels Bulanan</a>
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Dokumentasi Event</a>
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Desain Feed Instagram</a>
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Liputan Program CSR</a>
+<a href="#kontak" class="chip reveal" style="background: #F2F2F2; color: #0B0B0B; border-radius: 999px; padding: 16px 28px; font-size: 17px; font-weight: 600">Multimedia &amp; Live Streaming</a>
+</div>
+<p style="margin: 0; font-size: 18px; font-weight: 600; color: #FFFFFF">Pilih satu, kirim lewat DM atau WhatsApp.</p>
+</div>
+</section>
+
+<section id="kontak" style="position: relative; overflow: hidden; background: #D7FF5B; color: #0B0B0B">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse 70% 90% at 100% 0%, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0) 60%), radial-gradient(ellipse 60% 70% at 0% 100%, rgba(11,11,11,0.12) 0%, rgba(11,11,11,0) 70%)"></div>
+<div class="breathe" aria-hidden="true" style="position: absolute; right: -180px; top: -180px; width: 560px; height: 560px; border-radius: 50%; border: 2px solid rgba(11,11,11,0.14)"></div>
+<div class="breathe" aria-hidden="true" style="position: absolute; right: -80px; top: -80px; width: 360px; height: 360px; border-radius: 50%; border: 2px solid rgba(11,11,11,0.14)"></div>
+<div class="breathe" aria-hidden="true" style="position: absolute; right: 20px; top: 20px; width: 160px; height: 160px; border-radius: 50%; border: 2px solid rgba(11,11,11,0.14)"></div>
+<div style="position: relative; max-width: 1280px; margin: 0 auto; padding: 120px 5% 80px; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between; align-items: flex-end">
+<h2 class="reveal" style="color: #0B0B0B; margin: 0; font-size: clamp(48px, 7vw, 112px); font-weight: 900; line-height: 0.95; letter-spacing: -0.05em; flex: 1 1 520px">Siap bikin sesuatu yang berdampak?</h2>
+<div class="reveal" style="display: flex; flex-direction: column; gap: 14px; flex: 0 1 360px">
+<a href="https://wa.me/6281316044030?text=Halo%20Axora%2C%20saya%20tertarik%20dengan%20layanan%20kalian." class="btn" style="display: flex; justify-content: space-between; align-items: center; background: #0B0B0B; color: #FFFFFF; padding: 20px 28px; border-radius: 16px; font-size: 17px; font-weight: 700">WA +62 813-1604-4030<span style="color: #D7FF5B">→</span></a>
+<a href="mailto:axora_creative@gmail.com" class="btn" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; border: 2px solid #0B0B0B; color: #0B0B0B; padding: 18px 28px; border-radius: 16px; font-size: 16px; font-weight: 700; word-break: break-all">axora_creative@gmail.com<span>→</span></a>
+<a href="https://instagram.com/axora_creative" class="btn" style="display: flex; justify-content: space-between; align-items: center; border: 2px solid #0B0B0B; color: #0B0B0B; padding: 18px 28px; border-radius: 16px; font-size: 17px; font-weight: 700">@axora_creative<span>→</span></a>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; border-top: 1.5px solid rgba(11,11,11,0.3); padding-top: 32px">
+<img src="images/logo-dark.png" alt="AXORA" style="height: 36px; width: auto; display: block">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: 5px">IDEAS INTO IMPACT.</div>
+<div style="font-size: 14px; font-weight: 500">© 2026 Axora Creative Studio</div>
+</div>
+</div>
+</section>
+</main>
+
+</div>
+</body>
+</html>
